@@ -17,7 +17,17 @@ html, body{
             font-size: 335%;
             display: inline-block;
             width: 30%;
+            position: relative;
+            bottom: 33%;
         }
+            #logo{
+
+                width: 15%;
+                height: 100%;
+                position: relative;
+                
+            }
+
 
     main{
 
@@ -26,9 +36,49 @@ html, body{
         
     
     }
-        #fundo{
+        .input{
 
-            height: 80%;
-            width: 100%;
+            position: relative;
+            top: 4%;
+            left: 1%;
 
         }
+
+   
+        #conteudo {
+            border: solid black;
+            position: relative;
+            width: 40%;
+            height: 73%;
+            top: 20%;
+            left: 0%;
+        }   
+
+            #titulo {
+                position: relative;
+                left: 1%;
+                display: inline-block;
+                width: 98%;
+                text-align: center;
+            }
+
+            #explicacao{
+
+                bottom: 0%;
+                position: relative;
+                left: 1%;
+                display: inline-block;
+                width: 98%;
+                height: 77%;
+            }
+            #imagem{
+                border: black solid;
+                height: 95%;
+                width: 55%;
+                position: relative;
+                left: 44%;
+                bottom: 76%;
+            }
+
+            
+            
