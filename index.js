@@ -1,34 +1,48 @@
-const url = "https://api.nasa.gov/planetary/apod?api_key=";
-var chave = "BNjUedFKICh225wd8VhQnuX2aZswmzREqqcCGBBO";
+const link = "https://api.nasa.gov/planetary/apod?";
+var chave = "api_key=c71SvKhqPfHXIURh3NaUZTYxoYsw30p5NBB9HpNz";
 
-var final = url + chave;
+var final = link + chave;
+
+console.log(final)
 
 window.onload = async function(){
 
-    const response = await fetch(`${url}${chave}`);
+    const response = await fetch(`${link}${chave}`);
     const dados = await response.json();
 
     var titulo = document.getElementById("titulo").innerHTML = dados.title;   
     var explicacao = document.getElementById("explicacao").innerHTML = dados.explanation;
-
+    var imagens = dados.hdurl
+    var imagem = document.getElementById("imagem").innerHTML = [`<img src=${imagens} class="classe"></img> `]
 
 }
 
 
 
+$("#enviar").click(function(event){
+   
+    event.preventDefault();
+    pesquisar();
+
+})
+
+    
+
+async function pesquisar (){
+
+    var data = $("#data").val();
+
+    var dataFormatada = `${data.slice(0,4)}-${data.slice(5,7)}-${data.slice(8,10)}`;
+
+    var novaResponse = await fetch(`${link}date=${dataFormatada}&${chave}`);
+    var novoDados = await novaResponse.json();
+
+    var novoTitulo = document.getElementById("titulo").innerHTML = novoDados.title;   
+    var novaExplicacao = document.getElementById("explicacao").innerHTML = novoDados.explanation;
+    var novaimagens = novoDados.hdurl
+    var novaimagem = document.getElementById("imagem").innerHTML = [`<img src=${novaimagens} class="classe"></img> `]
+}
 
 
 
-
-
-
-
-
-/*fetch(`${url}${chave}`)
-    .then(response => response.json())
-    .then(dados => {
-        const div = document.getElementById("conteudo");
-        div.innerHTML = dados.hdurl;
-    })
-    .catch(erro => console.log(erro));*/
 

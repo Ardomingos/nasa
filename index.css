@@ -73,11 +73,31 @@ html, body{
             }
             #imagem{
                 border: black solid;
-                height: 95%;
+                height: 75%;
                 width: 55%;
-                position: relative;
+                position: absolute;
                 left: 44%;
-                bottom: 76%;
+                bottom: 2%;
+            }
+
+            #video{
+                border: black solid;
+                height: 75%;
+                width: 55%;
+                position: absolute;
+                left: 44%;
+                bottom: 2%;
+            }
+
+            .classe{
+                
+                height: 100%;
+                width: 100%;
+                position: relative;
+                
+            }
+
+
             }
 
             
