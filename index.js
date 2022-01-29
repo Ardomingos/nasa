@@ -1,6 +1,8 @@
 const link = "https://api.nasa.gov/planetary/apod?";
 var chave = "api_key=c71SvKhqPfHXIURh3NaUZTYxoYsw30p5NBB9HpNz";
 
+console.log(`${link}${chave}`)
+
 
 window.onload = async function(){
 
@@ -10,8 +12,19 @@ window.onload = async function(){
 
     var titulo = document.getElementById("titulo").innerHTML = dados.title;   
     var explicacao = document.getElementById("explicacao").innerHTML = dados.explanation;
+
+
+    if(dados.media_type == "image"){
+    
     var imagens = dados.hdurl
-    var imagem = document.getElementById("imagem").innerHTML = [`<img src=${imagens} class="classe"></img> `]
+    var imagem = document.getElementById("media").innerHTML = [`<img src=${imagens} class="classe"></img> `]
+
+    } else {
+
+        var videos = dados.url
+        var video = document.getElementById("media").innerHTML = [`<iframe  src=${videos} class="classe"></iframe > `]
+
+    }
 
 }
 
@@ -37,8 +50,19 @@ async function pesquisar (){
 
     var novoTitulo = document.getElementById("titulo").innerHTML = novoDados.title;   
     var novaExplicacao = document.getElementById("explicacao").innerHTML = novoDados.explanation;
-    var novaimagens = novoDados.hdurl
-    var novaimagem = document.getElementById("imagem").innerHTML = [`<img src=${novaimagens} class="classe"></img> `]
+    
+    if(novoDados.media_type == "image"){
+        
+        var novaimagens = novoDados.hdurl
+        var novaimagem = document.getElementById("media").innerHTML = [`<img src=${novaimagens} class="classe"></img> `]
+        
+    
+        } else {
+    
+            var novoVideos = novoDados.url
+            var novoVideo = document.getElementById("media").innerHTML = [`<iframe  src=${novoVideos} class="classe"></iframe > `]
+    
+        }
 }
 
 
