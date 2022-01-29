@@ -1,13 +1,11 @@
 const link = "https://api.nasa.gov/planetary/apod?";
 var chave = "api_key=c71SvKhqPfHXIURh3NaUZTYxoYsw30p5NBB9HpNz";
 
-var final = link + chave;
-
-console.log(final)
 
 window.onload = async function(){
 
     const response = await fetch(`${link}${chave}`);
+
     const dados = await response.json();
 
     var titulo = document.getElementById("titulo").innerHTML = dados.title;   
