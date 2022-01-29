@@ -7,7 +7,7 @@ html, body{
     header{
         
         height: 20%;
-        border: solid black;
+        
         background-color: rgb(65, 65, 192);
 
     }
@@ -32,7 +32,7 @@ html, body{
     main{
 
         height: 75%;
-        border: black solid;
+        
         
     
     }
@@ -46,7 +46,7 @@ html, body{
 
    
         #conteudo {
-            border: solid black;
+            
             position: relative;
             width: 40%;
             height: 73%;
@@ -73,7 +73,7 @@ html, body{
             }
             
             #media{
-                border: black solid;
+                
                 height: 75%;
                 width: 55%;
                 position: absolute;
