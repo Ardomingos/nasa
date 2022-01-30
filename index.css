@@ -36,12 +36,19 @@ html, body{
         
     
     }
+
+        #data-att{
+            position: relative;
+            left: 1.5%;
+            top: 1%;
+        }
         .input{
 
             position: relative;
-            top: 4%;
-            left: 1%;
-
+            top: 7.5%;
+            right: 4.5%;
+            height: 6%;
+            padding-left: 8px;
         }
 
    
@@ -88,6 +95,7 @@ html, body{
                 height: 100%;
                 width: 100%;
                 position: relative;
+                border-radius: 2px;
                 
             }
 

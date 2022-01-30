@@ -13,6 +13,7 @@ window.onload = async function(){
     var titulo = document.getElementById("titulo").innerHTML = dados.title;   
     var explicacao = document.getElementById("explicacao").innerHTML = dados.explanation;
 
+    var data = document.getElementById("data-att").innerHTML = dados.date;
 
     if(dados.media_type == "image"){
     
@@ -51,6 +52,8 @@ async function pesquisar (){
     var novoTitulo = document.getElementById("titulo").innerHTML = novoDados.title;   
     var novaExplicacao = document.getElementById("explicacao").innerHTML = novoDados.explanation;
     
+    var novaData = document.getElementById("data-att").innerHTML = novoDados.date;
+
     if(novoDados.media_type == "image"){
         
         var novaimagens = novoDados.hdurl
